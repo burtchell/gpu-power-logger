@@ -1,0 +1,8 @@
+name: gpu-carbon-estimator-demo
+description: estimates carbon emissions from gpu power usage
+tags:
+initialize:
+  plugins:
+    gpu-carbon-estimator:
+      method: GpuCarbonEstimator
+      path: gpu-carbon-estimator
