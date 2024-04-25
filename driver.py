@@ -99,5 +99,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     devices, n_devices = setup_pynvml()
+
+    print(f"running '{" ".join(args.command)}'")
     results = monitor_program(args.command, args.frequency, devices, n_devices)
+
+    print(f"writing to manifest")
     output_to_manifest_yaml(results, args.region, args.output)
